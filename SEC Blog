@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML BLOG</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: orange;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background-color: DarkGoldenRod;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+
+            border-radius: 5px;
+        }
+        article {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+        h2 {
+            color:"Green";
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        .post-info {
+            color: #777;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+        .post-info span {
+            margin-right: 10px;
+        }
+        .highlight {
+            background-color: #FFFF00;
+            padding: 5px;
+            border-radius: 3px;
+        }        
+          footer {
+            background-color: DarkGoldenRod;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+       }
+    </style>
+</head>
+<body>
+ <i>published on:01-01-2024<br>
+author:Amrutha A Nambiar</i>
+    <header>
+        <h1>HTML Hub: Crafting the Web</h1>
+    </header>
+    <main>
+        <article>
+            <h1>Understanding HTML</h1>
+         <style>
+            h1 {text-align: center;}
+            <div class="post-info">
+                <span>Published on December 28, 2023</span>
+            </div></style><hr>
+           <center><a href="https://ibb.co/QYpCytM"><img src="https://i.ibb.co/WBGPmjf/IMG22.png" alt="IMG22" border="0" " alt="IMAGE"></center></a><hr>
+            <h1>What Is HTML?</h1>
+            <p>HTML stands for<b> HyperText Markup Language.</b> HyperText denotes text embedded with links leading to other texts or resources. Whenever you click on an emphasized link directing you to another page, that's utilizing hypertext. As these linked pages grow, they interconnect to form a vast "web" of information, giving rise to the term World Wide Web.</p>
+            <p>Markup involves the special symbols or codes within a document that instruct the web browser on displaying the content. For instance, markup code can dictate text to appear in bold or italics, identify headings versus paragraphs, and more. HTML represents just one among several languages utilizing this markup code to structure and format information on the web.</p>
+            <p>HTML serves as the cornerstone of any website, providing the fundamental structure and content, encompassing text, links, tables, and connections to images.</p>
+            <p><b>CSS</b>, or <b>Cascading Style Sheets</b>, plays a crucial role in defining a page's design, determining the appearance and layout. It allows specifications for elements' sizes, fonts, background colors, and border widths, contributing to the overall visual presentation.</p>
+            <p><b>JavaScript</b>, a more intricate language, facilitates interactive features within web pages. Actions like image transformations upon mouse hovering or automatic updates to a shopping cart upon item selection rely on JavaScript's ability to modify the underlying HTML code.</p>
+            <p>While <b>CSS</b> and <b>JavaScript</b> enhance a site's aesthetics and functionality, <b>HTML</b> lays the essential groundwork. Interestingly, even if CSS or JavaScript encounters issues, most websites will still display HTML content, showcasing its foundational importance in web development.</p>
+           <hr> <h1>Structure</h1>
+            <p>The appearance of HTML code is akin to regular text, distinguished mainly by the use of angle brackets that envelop the markup instructions for the browser.</p>
+<b>&lt!DOCTYPE HTML&gt<br>
+&lthtml&gt<br>
+&lthead<br>
+&lttitle&gt A Simple HTML Example<br>
+&lt/head&gt<br>
+&ltbody&gt<br>
+&lth1&gt This is a header &lt/h1&gt<br>
+&ltp&gt This is a Sentence in a paragraph.&lt/p&gt<br>
+&ltp&gt And this is the second paragraph with &ltstrong&gt bold text&lt/strong&gt.&lt/p&gt<br>
+&lt/body&gt<br>
+&lt/html&gt<br></b>
+<center><a href="https://imgbb.com/"><img src="https://i.ibb.co/LpmtkMr/CODE1.png" alt="CODE1" border="0" "C:\Users\user\Pictures\Code1.png" alt="code"></center></a>
+<p>If you save this code into a text file with the filename “It.html” and open it in your browser, it should display a page like this:</p>
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset=utf-8">
+<title>A Simple HTML Example</title>
+</head>
+<body>
+<h1>This is a header</h1>
+<p>This is a paragraph, centered on the page.</p>
+<p>And this is the second paragraph with <strong>bold text</strong>.</p>
+</body>
+</html>
+<center><a href="https://imgbb.com/"><img src="https://i.ibb.co/2czvrF7/img2.png" alt="img2" border="0" "C:\Users\user\Downloads\img2.png" alt="Output"></center></a><br><br><hr>
+<h1>Tags</h1>
+<p><b>Tags are used to separate HTML code from regular text. </b>
+<ul><li>Any text written inside the angle brackets will not be displayed in the browser</li>
+<li>The text inside the angle brackets is just used to tell the browser how to display or transform regular text located between the <b>opening tag</b> (also called the start tag) and the <b>closing tag</b> (also called the end tag).</li></ul></p>
+<p><b>Some of the tags in HTML</b><p>
+<ul>
+<li><b>&lt;html&gt:</b> Defines the root of an HTML document.</li><br>
+<li><b>&lt;head&gt:</b> Contains meta-information about the document such as title, links to stylesheets, scripts, etc.</li><br>
+<li><b>&lt;title&gt:</b> Sets the title of the HTML document displayed in the browser's title bar or tab.</li><br>
+<li><b>&lt;body&gt:</b> Contains the visible content of the document.</li><br>
+<li><b>&lt;h1&gt to &lt;h6&gt:</b> Headings, where h1 is the most important and h6 is the least important.</li><br>
+<li><b>&lt;p&gt:</b> Defines a paragraph.</li><br>
+<li><b>&lt;a&gt:</b> Creates a hyperlink to another webpage or resource.</li><br>
+<li><b>&lt;img&gt:</b> Embeds an image in the document.</li><br>
+<li><b>&lt;ul&gt:</b> Defines an unordered (bulleted) list.</li><br>
+<li><b>&lt;ol&gt:</b> Defines an ordered (numbered) list.</li><br>
+<li><b>&lt;li&gt:</b> Represents a list item within ul or ol.</li><br>
+<li><b>&lt;div&gt:</b> Defines a division or a section in an HTML document. Used for layout purposes.</li><br>
+<li><b>&lt;span&gt:</b> Defines an inline section in an HTML document. Often used for styling small portions of text.</li><br>
+<li><b>&lt;input&gt:</b> Creates an input field for various types of user input.</li><br>
+<li><b>&lt;form&gt:</b> Wraps form elements and defines an interactive form on the webpage.</li><br>
+<li><b>&lt;button&gt:</b> Creates a clickable button.</li><br>
+<li><b>&lt;table&gt: </b>Defines a table.</li><br>
+<li><b>&lt;tr&gt:</b> Defines a table row.</li><br>
+<li><b>&lt;td&gt:</b> Defines a table cell.</li><br>
+<li><b>&lt;thead&gt, &lt;tbody&gt, &lt;tfoot&gt:</b> Sections of a table for the header, body, and footer respectively.</li><br>
+<li><b>&lt;iframe&gt:</b> Embeds another HTML page within the current page.</li><br>
+<li><b>&lt;video&gt:</b> Embeds video content.</li><br>
+<li><b>&lt;audio&gt:</b> Embeds audio content.</li><br>
+<li><b>&lt;script&gt:</b> Embeds or links to a script, typically JavaScript.</li><br>
+<center><a href="https://ibb.co/Y82RXjc"><img src="https://i.ibb.co/zbsnFfX/HTML-Text-Formatting-Tags.jpg" alt="HTML-Text-Formatting-Tags" border="0"></center></a>
+<li><b>&lt;b&gt:</b>Renders text in a bold font. Historically used for presentation but semantically less meaningful than &ltstrong&gt. Often used when no strong emphasis is implied, just visual styling.</li><br>
+<p>eg:This is <b>bold</b> text.</p>
+<li><b>&lt;i&gt:</b>Renders text in italic. Similar to &ltb&gt, it's traditionally used for presentation but has less semantic meaning compared to &ltem&gt.</li><br>
+<p>eg:This is <i>italic</i> text.</p>
+<li><b>&lt;u&gt:</b>Underlines text. Previously used to denote hyperlinks, but in modern web design, it's often avoided for non-link text due to its association with links.</li><br>
+<p>eg:This is <u>underlined</u> text.</p>
+<li><b>&lt;strong&gt:</b>Indicates strong importance, typically rendering as bold. Semantically stronger than &ltb&gt, implying stronger importance or emphasis.</li><br>
+<p>eg:<strong>Important:</strong> Please read the instructions carefully.</p>
+<li><b>&lt;em&gt:</b>Emphasizes text, rendering as italic. Semantically signifies emphasis, providing a slight distinction compared to &lti&gt.</li><br>
+<p>eg:<em>Caution:</em> Handle with care.</p>
+<li><b>&lt;mark&gt:</b>Highlights or marks text. Useful for highlighting portions of text for reference or emphasis.</li><br>
+<p>eg:Select the <mark>important</mark> points.</p>
+<li><b>&lt;sub&gt:</b>Renders text as a subscript, typically used for footnotes or mathematical equations where smaller text is needed below the baseline.</li><br>
+<p>eg:H<sub>2</sub>O is water.</p>
+<li><b>&lt;sup&gt:</b>Renders text as a superscript. Commonly used for footnotes, exponents, or citations where text is placed above the baseline.</li><br>
+<p>eg:The area of a circle is π<sup>r</sup><sup>2</sup>.</p>
+<li><b>&lt;strike&gt:</b>Renders text with a strikethrough line. Often used to denote content that is no longer relevant or has been removed.</li><br>
+<p>eg:<strike>Old Price:</strike> rs20</p>
+<li><b>&lt;code&gt:</b>Used to denote inline code snippets within a paragraph or text. It maintains spacing and uses a monospaced font.</li><br>
+<p>eg:To install, use the command <code>npm install package-name</code>.</p>
+<li><b>&lt;pre&gt:</b>Preformatted text that maintains spacing and line breaks as written in the HTML code. Typically used for displaying code blocks or maintaining text formatting. Contains CSS code to style HTML elements.used for displaying code blocks or maintaining text formatting.</li><br>
+eg:<pre>
+function greet() {
+    console.log("Hello, world!");
+}
+</pre>
+<hr>
+<h1>How to create a Table in HTML</h1>
+<p>HTML<b> tables</b> serve an excellent purpose for presenting organized data, such as an address book or product descriptions with prices. However, it's important to note that while tables are ideal for displaying information, they shouldn't be employed to dictate the layout of an entire webpage.
+</p>
+<p>To build a table in HTML, we utilize the <b>&lt;table &gt </b>tag.</p>
+<p>To craft our table, we proceed by constructing each row individually using the <b>&lt;tr&gt</b> tag for every row.</p>
+
+<p>For the initial row, employing the <b>&lt;th&gt</b> tag helps delineate the headings for respective columns.</p>
+
+<p>Subsequently, for each consecutive row, employing the <b>&lt;td&gt</b> tag allows us to specify the data for individual cells.</p>
+<center><a href="https://imgbb.com/"><img src="https://i.ibb.co/m5bMKwv/code.png" alt="code" border="0" "C:\Users\user\Pictures\code.png" alt="Code"></a></center>
+<p>When you view the document in the browser, the table should look like this:</p>
+<table border="1">
+  <tr>
+    <th>Name</th>
+    <th>Age</th>  
+    <th>Country</th>
+  </tr>
+  <tr>
+    <td>Amrutha</td>
+    <td>18</td>
+    <td>Canada</td>
+  </tr>
+  <tr>
+    <td>Ann maria</td>
+    <td>35</td>
+    <td>USA</td>
+  </tr>
+  <tr>
+    <td>Anush</td>
+    <td>19</td>
+    <td>India</td>
+  </tr>
+</table><br><hr>
+<p><b>In conclusion, HTML serves as the foundation of the web, empowering us to craft engaging and dynamic online experiences. We've explored the basics of HTML structure, delved into various elements and their attributes, and discovered how these components form the backbone of web development.
+
+From understanding the significance of tags and attributes to constructing tables, forms, and other essential elements, this journey into HTML provides a solid footing for further exploration. Remember, mastering HTML is not just about creating web pages; it's about architecting the digital landscape we engage with daily.
+
+<p>As you venture forth in your HTML journey, continue experimenting, exploring new elements, and embracing the evolving standards of the web. Let your creativity flourish, shaping the digital world one tag at a time.
+
+<p>Thank you for joining us on this exploration of HTML's boundless possibilities. Keep coding, keep creating, and keep pushing the boundaries of what's possible in the web universe!
+
+</p>
+<footer>
+        <p>&copy; 2024 HTML Hub. All rights reserved.</p>
+    </footer>
+        </article>
+    </main>
+</body>
+</html>

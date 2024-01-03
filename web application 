@@ -1,0 +1,75 @@
+home page
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Noteflix</title>
+  
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-image: url("https://i.ibb.co/zsC8dFp/flower.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center;
+    }
+
+    .intro {
+      text-align: center;
+      color: orange;
+      max-width: 500px;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      background-color: #fff;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      background-color: #3498db;
+      color: #fff;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #2980b9;
+    }
+  </style>
+</head>
+<body>
+  <section class="intro">
+    <header>
+      <h1>Welcome to Noteflix</h1>
+    </header>
+    <div class="intro-text">
+      <p>Noteflix is your go-to note-taking platform designed to simplify your life. Capture your thoughts, create to-do lists, or jot down important information effortlessly.</p>
+      <p>Get started by adding your first note below:<br>
+      <mark>double-click the button</mark></p>
+    </div>
+  
+    <button onclick="navigateToNotePage()">Go to Noteflix</button>
+  </section>
+
+  <div class="app">
+   
+  </div>
+
+  <script>
+    function navigateToNotePage() {
+      window.location.href = "https://noteflix.neocities.org/notes.html"; 
+    }
+
+  </script>
+</body>
+</html>
+

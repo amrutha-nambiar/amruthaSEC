@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Different HTML Tags</title>
+</head>
+<body>
+
+<h1>This is a Heading (h1)</h1>
+<h2>This is a Subheading (h2)</h2>
+<p>This is a Paragraph</p>
+
+<a href="https://www.google.com">This is a Link (a)</a>
+
+<ul>
+  <li>Unordered List (ul)
+    <ul>
+      <li>Nested List Item (ul)</li>
+      <li>Another Nested List Item (ul)</li>
+    </ul>
+  </li>
+  <li>Another List Item (ul)</li>
+</ul>
+
+<ol>
+  <li>Ordered List (ol)</li>
+  <li>Another Ordered List Item (ol)</li>
+</ol>
+
+<table border="1">
+  <tr>
+    <th>Table (table)</th>
+    <th>Header (th)</th>
+  </tr>
+  <tr>
+    <td>Table Data (td)</td>
+    <td>Table Data (td)</td>
+  </tr>
+</table>
+
+</body>
+</html>

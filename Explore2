@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Font Example</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+
+<h1>This is a heading</h1>
+<p>This is a paragraph with different font styles.</p>
+
+</body>
+</html>
+
+
+css
+
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  font-family: 'Times New Roman', serif;
+}
+
+p {
+  font-family: Verdana, Geneva, sans-serif;
+}
+
+
+h1 {
+  font-size: 36px;
+}
+
+p {
+  font-size: 18px;
+}

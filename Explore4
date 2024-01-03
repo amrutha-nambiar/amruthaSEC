@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Find Greater Number</title>
+</head>
+<body>
+
+<p>Open the console to see the greater number.</p>
+
+<script>
+    function findGreaterNumber(a, b) {
+        if (a > b) {
+            return a;
+        } else {
+            return b;
+        }
+    }
+
+
+    let number1 = 10;
+    let number2 = 20;
+
+    let greaterNumber = findGreaterNumber(number1, number2);
+    console.log("The greater number is: " + greaterNumber);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Noteflix</title>
+  <style>
+   
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url("https://i.ibb.co/zsC8dFp/flower.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center;
+    }
+
+    header {
+      color: orange;
+      text-align: center;
+    }
+
+    .app {
+      max-width: 500px;
+      margin: 20px auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .input-container {
+      display: flex;
+      margin-bottom: 20px;
+    }
+
+    input[type='text'] {
+      flex: 1;
+      padding: 10px;
+      border: none;
+      border-radius: 5px 0 0 5px;
+    }
+
+    button {
+      padding: 10px 15px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 0 5px 5px 0;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .notes-container {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .note {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 90px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+
+    }
+
+    .note:hover {
+      transform: translateY(-3px);
+    }
+
+    .note p {
+      flex: 1;
+      margin: 0;
+    }
+
+    .actions {
+      display: flex;
+      gap: 8px;
+    }
+
+    .actions button {
+      padding: 6px 10px;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .actions button:hover {
+      background-color: #eee;
+    }
+    @keyframes fade-in {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fade-out {
+      from { opacity: 1; transform: translateY(0); }
+      to { opacity: 0; transform: translateY(-10px); }
+    }
+
+    .note-added {
+      animation: fade-in 0.5s ease forwards;
+    }
+
+    .note-deleted {
+      animation: fade-out 0.5s ease forwards;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to Noteflix</h1>
+  </header>
+  <div class="app">
+    <div class="input-container">
+      <input type="text" id="noteInput" placeholder="Write your note">
+      <button onclick="addNote()">Add</button>
+    </div>
+    <div id="notesContainer" class="notes-container"></div>
+  </div>
+
+  <script>
+    let notes = [];
+
+    function renderNotes() {
+      const notesContainer = document.getElementById('notesContainer');
+      notesContainer.innerHTML = '';
+
+      notes.forEach((note, index) => {
+        const noteDiv = document.createElement('div');
+        noteDiv.className = 'note';
+
+        const notePara = document.createElement('p');
+        notePara.textContent = note;
+
+        const actionsDiv = document.createElement('div');
+        actionsDiv.className = 'actions';
+
+        const editButton = document.createElement('button');
+        editButton.innerHTML = '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 3a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-4.879l-2.561 2.561a1 1 0 0 1-1.414 0l-8-8a1 1 0 0 1 0-1.414l2.561-2.561H21z"></path></svg>';
+        editButton.onclick = () => editNote(index);
+
+        const deleteButton = document.createElement('button');
+        deleteButton.innerHTML = '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2M5 6v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6m-5 2v10"></path></svg>';
+        deleteButton.onclick = () => deleteNote(index);
+
+        actionsDiv.appendChild(editButton);
+        actionsDiv.appendChild(deleteButton);
+
+        noteDiv.appendChild(notePara);
+        noteDiv.appendChild(actionsDiv);
+
+        notesContainer.appendChild(noteDiv);
+        noteDiv.classList.add('note-added');
+        setTimeout(() => {
+          noteDiv.classList.remove('note-added');
+        }, 500);
+      });
+    }
+function addNote() {
+      const noteInput = document.getElementById('noteInput');
+      const noteValue = noteInput.value.trim();
+
+      if (noteValue !== '') {
+        let userName = localStorage.getItem('userName');
+
+        if (!userName || userName.trim() === '') {
+          userName = prompt('Welcome! Please enter your name:');
+          if (userName === null || userName.trim() === '') {
+            userName = 'Friend';
+          }
+          alert(`Welcome, ${userName}! Enjoy taking your notes!`);
+          localStorage.setItem('userName', userName.trim());
+        }
+
+        if (!notes.length) {
+          notes.push(`Welcome, ${userName}!`);
+        }
+
+        notes.push(noteValue);
+        noteInput.value = '';
+        renderNotes();
+        saveNotes();
+      }
+    }
+
+    
+
+    function editNote(index) {
+      const editedNote = prompt('Edit your note:', notes[index]);
+      if (editedNote !== null) {
+        notes[index] = editedNote.trim();
+        renderNotes();
+        saveNotes();
+      }
+    }
+
+    function deleteNote(index) {
+      notes.splice(index, 1);
+      const notesContainer = document.getElementById('notesContainer');
+      notesContainer.children[index].classList.add('note-deleted');
+      setTimeout(() => {
+        renderNotes();
+        saveNotes();
+      }, 500);
+    }
+
+    function saveNotes() {
+      localStorage.setItem('notes', JSON.stringify(notes));
+    }
+
+    function loadNotes() {
+      const storedNotes = localStorage.getItem('notes');
+      if (storedNotes) {
+        notes = JSON.parse(storedNotes);
+        renderNotes();
+      }
+    }
+
+    loadNotes();
+  </script>
+</body>
+</html>
